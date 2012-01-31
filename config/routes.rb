@@ -1,9 +1,6 @@
 Gorgan::Application.routes.draw do
   root to: 'feed#index', as: 'feed'
 
-  controller :auth do
-    get 'auth'     => :auth
-    get 'callback' => :callback
-  end
-
+  match '/auth/:provider/callback', :to => 'sessions#create'
+  match '/auth/failure',            :to => 'sessions#failure'
 end

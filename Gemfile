@@ -26,4 +26,6 @@ group :development, :test do
   gem 'rspec-rails'
 end
 
-gem 'omni-auth'
+gem 'omniauth'
+gem 'omniauth-github'
+gem 'octokit', :git => 'git://github.com/pengwynn/octokit.git'

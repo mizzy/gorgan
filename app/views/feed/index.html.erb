@@ -1,0 +1,5 @@
+<% @orgs.each do |org| %>
+<pre>
+<%= link_to org["login"], org_path(org["login"]) %>
+</pre>
+<% end %>

@@ -1,0 +1,14 @@
+<pre>
+<%= @org %>
+</pre>
+
+<a href="<%= @org["html_url"] %>"><img src="<%= @org["avatar_url"] %>" /></a>
+
+<br />
+
+
+<pre>
+<% @repos.each do |repo| %>
+<%= repo %>
+<% end %>
+</pre>

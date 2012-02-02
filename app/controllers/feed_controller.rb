@@ -11,6 +11,9 @@ class FeedController < ApplicationController
   def org
     @org   = client.org(params[:org])
     @repos = client.org_repos(params[:org])
+    @repos.each do |repo|
+      repo["commits"] = client.commits("#{params[:org]}/#{repo['name']}")
+    end
   end
 
   private

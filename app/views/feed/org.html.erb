@@ -1,14 +1,17 @@
-<pre>
-<%= @org %>
-</pre>
 
-<a href="<%= @org["html_url"] %>"><img src="<%= @org["avatar_url"] %>" /></a>
+
+<a href="<%= @org["html_url"] %>"><img src="<%= @org["avatar_url"] %>" /> <%= @org["login"] %></a>
 
 <br />
 
 
 <pre>
 <% @repos.each do |repo| %>
-<%= repo %>
+  <%= repo["name"] %>
+  <% repo["commits"].each do |commit| %>
+    <% if commit.author %>
+      <img src="<%= commit.author.avatar_url %>" width="20" height="20" /> <%= commit.commit.message %>
+    <% end %>
+  <% end %>
 <% end %>
 </pre>

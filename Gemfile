@@ -28,5 +28,5 @@ end
 
 gem 'omniauth'
 gem 'omniauth-github'
-gem 'octokit'
+gem 'octokit', :git => 'git://github.com/pengwynn/octokit.git', :branch => 'api-version-3'
 

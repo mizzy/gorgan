@@ -29,4 +29,4 @@ end
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'octokit', :git => 'git://github.com/pengwynn/octokit.git', :branch => 'api-version-3'
-
+gem 'twitter-bootstrap-rails', :git => 'http://github.com/seyhunak/twitter-bootstrap-rails.git'

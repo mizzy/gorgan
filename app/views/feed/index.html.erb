@@ -1,5 +1,5 @@
-<% @orgs.each do |org| %>
-<pre>
-<%= link_to org["login"], org_path(org["login"]) %>
-</pre>
-<% end %>
+<ul>
+  <% @orgs.each do |org| %>
+    <li><%= link_to org["login"], org_path(org["login"]) %></li>
+  <% end %>
+</ul>

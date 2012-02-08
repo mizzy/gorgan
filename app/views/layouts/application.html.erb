@@ -51,13 +51,13 @@
 
     <div class="container-fluid">
        <div class="row-fluid">
-        <div class="span3">
+        <div class="span2">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Organizations</li>
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
+              <% octokit.orgs.each do |org| %>
+              <li><%= link_to org["login"], org_path(org["login"]) %></li>
+              <% end %>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
